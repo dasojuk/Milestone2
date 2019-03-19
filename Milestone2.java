@@ -13,38 +13,26 @@ public class Milestone2 {
 		double perimeter;
 		String cont = ("yes");
 		
-			
 		Scanner input = new Scanner(System.in);
 		while(!cont.equals("quit")){
 		System.out.print("How many fences would you like to create: ");
 		fenceAmount = input.nextInt();
+		
 		int count = 1;
 		
 		while(count <= fenceAmount){
-			
-			
-			
-			
-			
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.print("What type of fence would you like to create? Please enter 1 for rectangle, 2 for right triangle, or 3 for circle: ");
+		fenceType = input.nextInt();
 		
 		if(fenceType == 1){
 			input.nextLine();
-			System.out.print("Enter the length of the rectangle fence.");
+			System.out.print("Enter the length of the rectangle fence.");                                                                                                                                         b
 			length = input.nextInt();
 			
 			System.out.print("Enter the width of the rectangle fence.");
 			width = input.nextInt();
 			
-			calcRectanglePerimeter(length, width);
-			
+			calcRectanglePerimeter(length, width);	
 		}
 		
 		else if(fenceType == 2){
@@ -54,31 +42,24 @@ public class Milestone2 {
 			System.out.print("Enter the height of the right triangle fence.");
 			height = input.nextInt();
 			
-			calcTrianglePerimeter(base, height);
-			
+			calcTrianglePerimeter(base, height);	
 		}
-		
-		
 		else if(fenceType == 3){
 			
 			System.out.print("Enter the radius of the circular fence.");
 			radius = input.nextInt();
 			calcCirclePerimeter(radius);
 			System.out.println();
-		
 		}
-	
-		
-		
-		
-		count++;
+			count++;
 		}
+			
 		input.nextLine();
 		System.out.println("Would you like to continue: ");
 		cont = input.nextLine();
+			
 		}
 	}
-	
 	
 	public static double calcRectanglePerimeter(double length, double width){
 		double perimeter = (2 * length) + (2 * width);
